@@ -1,0 +1,42 @@
+
+const aHashMap = {
+    reading: 88,
+    writing: 97,
+    history: 90,
+    math: 99,
+    science: 68
+};
+
+interface ISubjectToScoreDictionary{
+    [aSubject: string]: number;
+}
+
+// Step #1: tell TypeScript that you want "aHashMap" to be constructed as a "ISubjectToScoreDictionary".
+// Step #2: WHY does that work?
+
+const theValues = Object.keys(aHashMap).map(function(aKey){
+    return aHashMap[aKey];
+});
+
+// Step #3: Can we make this interface less taxonomic and more data oriented. Perhaps... more... GENERIC... ;)
+
+// Hint: interface IDictionary<T>
+
+interface IDictionary<T>{
+    [aKey: string]: T
+}
+
+// Step #4: Why can't this one be used in Object.keys?
+const wildlyDynamicObject =  {
+    user: "Bob Smith",
+    SSN: 12342950,
+    profile: {
+        courses: ["reading", "writing", "history"]
+    },
+    alternateUsername: null,
+    options: undefined
+}
+
+const result = Object.keys(wildlyDynamicObject).map(aKey => {
+    return wildlyDynamicObject[aKey];
+})

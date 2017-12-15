@@ -1,0 +1,53 @@
+import * as moment from 'moment';
+import {IDatabase} from 'types/iDatabase'
+import {theDB} from './../lib/mockDatabase';
+
+interface IUserEvent {
+    username: string;
+    dateSent: moment.Moment;
+    eventId: number;
+}
+
+interface IFormEvent {
+    formId: number;
+    dateSent: moment.Moment;
+    eventId: number;
+}
+
+function init(persistantDbStorage: IDatabase){
+
+    const userEvents: IUserEvent[] = [
+        {
+            dateSent: moment().add(1, 'year'),
+            eventId: 12345,
+            username: 'Bob Smith'
+        },
+        {
+            dateSent: moment().add(2, 'minute'),
+            eventId: 12345,
+            username: 'George Blue'
+        }
+    ];
+
+    const formEvents: IFormEvent[] = [
+        {
+            // Step #1: for fun, try the "Ctrl+Space" shortcut (or Alt+Space) to see how easy it is to build object literals once TypeScript knows the type. :)
+        },
+        {
+            dateSent: moment().add(3, 'minute'),
+            eventId: 213456,
+            formId: 1234596
+        }
+    ];
+
+    // Step #2: How can we refactor this function so that it can take both "userEvents" and "formEvents"?
+    function recordEvents(input): void {
+        persistantDbStorage.save(input.eventId + " " + input.dateSent)
+    }
+
+    recordEvents(userEvents);
+    recordEvents(formEvents);
+
+}
+
+init(theDB)

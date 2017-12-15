@@ -1,0 +1,22 @@
+
+
+function getMeAnEvenNumber(inputNum: number) /* Step #2: remove this comment and replace it with an explicit type */ {
+    if(inputNum % 2 === 0){
+        return inputNum + "";
+    }
+}
+
+// Step 1: Hover over the function to see what (implicit) type TypeScript has inferred that the function returns
+const myEvenNumber = getMeAnEvenNumber(3)
+
+function someFunctionThatNeedsTruthyInput(input: string): string {
+    return "You got: " + input;
+}
+
+let output: string;
+
+// Step 3: Without modifying the input types of `getMeAnEvenNumber` or `someFunctionThatNeedsTruthyInput`... can you guard against sending the function something it doesn't like?
+output = doSomething(myEvenNumber);
+
+console.log("output of doSomething was: " + output)
+

@@ -1,0 +1,31 @@
+
+var myArray = [
+    {
+        username: "Bob Smith",
+        age: 42,
+        address: {
+            street: "100 Pleasantville Lane",
+            city: "Philadelphia",
+            state: "PA"
+        },
+        SSN: 555555555
+    },
+    {
+        username: "Biff Tanen",
+        age: 23,
+        address: {
+            street: "37 Goal Lane",
+            city: "Pittsburgh",
+            state: "PA"
+        },
+    }
+]
+
+// Step #1: make the error go away
+function pluck<T>(input: T[], aProperty: string ){
+    return input.map(function(el){
+         return el[aProperty];
+    });
+}
+
+// Step #2: now use your new cool helper :)

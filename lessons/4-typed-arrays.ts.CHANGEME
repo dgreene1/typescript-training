@@ -1,0 +1,34 @@
+
+var myArray = [
+    {
+        username: "Bob Smith",
+        age: 42,
+        address: {
+            street: "100 Pleasantville Lane",
+            city: "Philadelphia",
+            state: "PA"
+        },
+        SSN: 555555555
+    },
+    {
+        username: "Biff Tanen",
+        age: 23,
+        address: {
+            street: "37 Goal Lane",
+            city: "Pittsburgh",
+            state: "PA"
+        },
+    }
+]
+
+// Step #1: Give the "users" parameter a type
+// Step #2: are there other errors?
+function calculateAddressesOfUsers(users): string[] {
+    const result =  users.map(function(aUser){
+        // Step #3: For fun, check out the autocomplete/intellisense when you add the state to this string
+        `${users.address.street} ${user.address.city}`
+    });
+    return result;
+}
+
+console.log(calculateAddressesOfUsers(myArray));
