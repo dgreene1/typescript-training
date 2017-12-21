@@ -6,7 +6,7 @@
 * An IDE that supports TypeScript feedback:
   * [Visual Studio Code](https://code.visualstudio.com/)
     * Provides built-in, first-class TypeScript support... and it's FREE! :)
-  * Not recommended --> any other IDE. However, atom and sublime have _okay_ plugins/extension for TypeScript. VSCode is preferred. 
+  * Also okay, but not recommended is any other IDE. I hear that Webstorm/IntelliJ is decent though. However, atom and sublime have _okay_ plugins/extension for TypeScript. VSCode is preferred. 
 
 # Setup
 
