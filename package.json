@@ -4,7 +4,7 @@
   "description": "Lessons on how to use TypeScript to solve JavaScript's most pressing problems",
   "main": "index.js",
   "scripts": {
-    "1": "npm run build && node ./build/lessons/1-primatives.js",
+    "1": "npm run build && node ./build/lessons/1-primitives.js",
     "2": "npm run build && node ./build/lessons/2-properties-of-objects.js",
     "3": "npm run build && node ./build/lessons/3-strict-falsy-checks.js",
     "4": "npm run build && node ./build/lessons/4-typed-arrays.js",
