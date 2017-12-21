@@ -1,31 +1,36 @@
+function startGenericsLessonRun(){
+    const myArray = [
+        {
+            username: "Bob Smith",
+            age: 42,
+            address: {
+                street: "100 Pleasantville Lane",
+                city: "Philadelphia",
+                state: "PA"
+            },
+            SSN: 555555555
+        },
+        {
+            username: "Biff Tanen",
+            age: 23,
+            address: {
+                street: "37 Goal Lane",
+                city: "Pittsburgh",
+                state: "PA"
+            },
+        }
+    ]
 
-var myArray = [
-    {
-        username: "Bob Smith",
-        age: 42,
-        address: {
-            street: "100 Pleasantville Lane",
-            city: "Philadelphia",
-            state: "PA"
-        },
-        SSN: 555555555
-    },
-    {
-        username: "Biff Tanen",
-        age: 23,
-        address: {
-            street: "37 Goal Lane",
-            city: "Pittsburgh",
-            state: "PA"
-        },
+    // function pluck<T>(input: T[], aProperty: keyof T ){  // <-- comment the fix in
+    function pluck<T>(input: T[], aProperty: string ){ // <-- comment the less-intelligent version out
+        return input.map(function(el){
+            return el[aProperty]; // Step #1: Hover over this error to see that TypeScript currently doesn't know how to help you in a type-safe way
+        });
     }
-]
 
-// Step #1: make the error go away
-function pluck<T>(input: T[], aProperty: string ){
-    return input.map(function(el){
-         return el[aProperty];
-    });
+    // Step #2: Finish by using pluck to just get the names
+    const result = pluck(myArray, 'usernazme'); // hint: notice that I put a typo in? See how keyof identifies the attributes of myArray?
+    console.log()
 }
 
-// Step #2: now use your new cool helper :)
+startGenericsLessonRun();
