@@ -14,7 +14,8 @@ interface IFormEvent {
     eventId: number;
 }
 
-function init(persistantDbStorage: IDatabase){
+// The presence of the "export" keyword turns this file into a module which means we don't have to wrap the file in an IIFE (immediately-invoked function expression) like you saw in the previous lessons
+export function startMinimalInterfaceRun(persistantDbStorage: IDatabase){
 
     const userEvents: IUserEvent[] = [
         {
@@ -41,6 +42,7 @@ function init(persistantDbStorage: IDatabase){
     ];
 
     // Step #2: How can we refactor this function so that it can take both "userEvents" and "formEvents"?
+    //      ... hint: interface properties can be represented as an array of properties. These properties can be of type any
     function recordEvents(input): void {
         persistantDbStorage.save(input.eventId + " " + input.dateSent)
     }
@@ -50,4 +52,4 @@ function init(persistantDbStorage: IDatabase){
 
 }
 
-init(theDB)
+startMinimalInterfaceRun(theDB)
