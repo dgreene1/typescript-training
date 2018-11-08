@@ -12,9 +12,14 @@
 
 # Setup
 
-* run `npm install`
-* take a quick look at the basic [TypeScript language features](https://www.typescriptlang.org/docs/handbook/basic-types.html).
+* Run `npm install`
+* Take a quick look at the basic [TypeScript language features](https://www.typescriptlang.org/docs/handbook/basic-types.html).
   * You don't need to become a master through reading that ^ link. That's what this workshop is for! :)
-* start with any file in the lessons folder and start by:
-  * modify the file extension to be .ts
-  * hover over the errors (one at a time) and follow the steps/guidelines in the comments
+* Start with any file in the lessons folder and start by:
+  * There are two "varieties" of lesson files:
+    * (1) Lessons that are designed to help migrate your JavaScript to TypeScript. To take those lessons:
+      * rename the file extension from ".js" to be ".ts"
+      * hover over the errors (one at a time) and follow the steps/guidelines in the comments
+    * (2) Lessons that start in TypeScript. To take those lessons:
+      * rename the file extension from ".ts.CHANGEME" to be ".ts"
+      * hover over the errors (one at a time) and follow the steps/guidelines in the comments
