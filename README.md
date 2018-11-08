@@ -1,6 +1,8 @@
 
 # Requirements
-
+## Recommended Readings Before Starting
+* You might want to read/skim Microsoft's ["TypeScript In 5 Minutes" Tutorial](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+## Technical Requirements
 * NodeJS
 * NPM
 * An IDE that supports TypeScript feedback:
