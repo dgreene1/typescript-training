@@ -11,8 +11,9 @@
     "5": "npm run build && node ./build/lessons/5-generics.js",
     "6": "npm run build && node ./build/lessons/6-dynamics-and-minimal-interfaces.js",
     "7": "npm run build && node ./build/lessons/7-object-keys.js",
+    "8": "npm run build && node ./build/lessons/8-better-contracts-via-aggregate-types.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "echo 'To get started, please rename and fix one of the files in lessons.'",
+    "start": "echo 'To get started, please rename and fix one of the files in lessons, then run \"npm run 8\" (without the quotes and where \"8\" is the lesson number).'",
     "clean": "rimraf ./build",
     "build": "npm run clean && tsc"
   },
@@ -30,7 +31,7 @@
   },
   "homepage": "https://github.com/dgreene1/typescript-training#readme",
   "devDependencies": {
-    "typescript": "^2.6.2"
+    "typescript": "^3.1.6"
   },
   "dependencies": {
     "@types/moment": "^2.13.0",
